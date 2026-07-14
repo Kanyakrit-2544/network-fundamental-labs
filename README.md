@@ -70,7 +70,7 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 ### Topology | ผังเครือข่าย
 
-![topology](labs/Topology.png)
+![topology](labs/Topology)
 
 ---
 
@@ -78,7 +78,7 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 **End-to-end connectivity from PC6**
 
-![ping](labs/ping.png)
+![ping](labs/ping)
 
 **EN** — PC6 successfully resolves and reaches `cisco.com`, `facebook.com`, and `8.8.8.8` with 0% loss. `TTL=126` confirms the packets crossed **2 routers** — the default TTL of 128 is decremented once per hop. This proves inter-site routing through the serial links is working, not just local connectivity.
 
