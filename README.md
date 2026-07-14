@@ -29,12 +29,12 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 | Site / Link | Prefix | Network | Broadcast | Router IP | Host Range | Usable |
 |---|---|---|---|---|---|---|
-| Site 1 | /26 | 192.168.1.0 |192.168.1.63 |192.168.1.62 | 64| 62|
-| Site 2 | /26 | 192.168.1.128 |192.168.1.191 |192.168.1.190 | 64| 62|
-| Site 3 | /28 | 192.168.1.64| 192.168.1.79| 192.168.1.78|16 | 62|
-| R1 ↔ Internet | /30 |192.168.1.112 | 192.168.1.115|192.168.1.114 | 4| 2|
-| R2 ↔ Internet | /26 |192.168.1.192 | 192.168.1.255|192.168.1.254 | 64|62 |
-| R4 ↔ Internet | /30 | 192.168.1.116| 192.168.1.119|192.168.1.118 | 4|2 |
+| Site 1 | /26 | 192.168.1.0 |192.168.1.63 |192.168.1.62 | .1 - .62| 62|
+| Site 2 | /26 | 192.168.1.128 |192.168.1.191 |192.168.1.190 | .129 - .190| 62|
+| Site 3 | /28 | 192.168.1.64| 192.168.1.79| 192.168.1.78|.65 - .78 | 14|
+| R1 ↔ Internet | /30 |192.168.1.112 | 192.168.1.115|192.168.1.114 | .113-.114| 2|
+| R2 ↔ Internet | /26 |192.168.1.192 | 192.168.1.255|192.168.1.254 | .193-.254|62 |
+| R4 ↔ Internet | /30 | 192.168.1.116| 192.168.1.119|192.168.1.118 | .117-.118|2 |
 
 > เติมของจริงจาก lab ให้ครบทุกช่อง
 
@@ -83,16 +83,6 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 **EN** — PC6 successfully resolves and reaches `cisco.com`, `facebook.com`, and `8.8.8.8` with 0% loss. `TTL=126` confirms the packets crossed **2 routers** — the default TTL of 128 is decremented once per hop. This proves inter-site routing through the serial links is working, not just local connectivity.
 
 **TH** — PC6 ping ถึง `cisco.com`, `facebook.com`, `8.8.8.8` ได้ครบ 0% loss · `TTL=126` ยืนยันว่า packet ผ่าน **router 2 ตัว** (TTL เริ่มที่ 128 ลด 1 ทุก hop) = routing ข้าม site ผ่าน serial link ทำงานจริง ไม่ใช่แค่ต่อได้ในวงตัวเอง
-
-**Router interface status**
-```
-<paste show ip interface brief output>
-```
-
-**Routing table**
-```
-<paste show ip route output>
-```
 
 ---
 
