@@ -85,6 +85,13 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 **TH** — PC6 ping ถึง `cisco.com`, `facebook.com`, `8.8.8.8` ได้ครบ 0% loss · `TTL=126` ยืนยันว่า packet ผ่าน **router 2 ตัว** (TTL เริ่มที่ 128 ลด 1 ทุก hop) = routing ข้าม site ผ่าน serial link ทำงานจริง ไม่ใช่แค่ต่อได้ในวงตัวเอง
 
 ---
+> **⚠️ Known deviation | จุดที่ยังไม่ตรงโจทย์**
+>
+> **EN** — R2's serial link was left as `/26` from the pre-configured topology and was not re-subnetted to `/30` as requirement #4 specifies. A point-to-point link uses 2 addresses, so this strands 60 usable addresses. To be corrected in a follow-up pass.
+>
+> **TH** — ขา serial ของ R2 ยังเป็น `/26` ตามที่ topology ตั้งมาให้ ไม่ได้ซอยเป็น `/30` ตามโจทย์ข้อ 4 · link แบบ point-to-point ใช้แค่ 2 IP → เสีย IP เปล่า 60 ตัว · จะกลับมาแก้รอบถัดไป
+
+---
 
 ### Key Formulas | สูตรที่ใช้
 
@@ -104,10 +111,7 @@ host count   = 2^(32 − prefix) − 2           ← subtract 2
 
 ```
 labs/
-  lab01-subnetting-vlsm/
-    subnetting-vlsm.pkt
-    screenshots/
-      topology.png
-      ping-success.png
-      show-ip-int-brief.png
+    Subnetting lab 2 - intial.pkt
+    Topology
+    Ping
 ```
