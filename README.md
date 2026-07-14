@@ -96,20 +96,6 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 ---
 
-### Troubleshooting Log | บันทึกการแก้ปัญหา
-
-| # | Symptom / อาการ | Root cause / สาเหตุ | Fix / วิธีแก้ | Takeaway / สิ่งที่ได้เรียนรู้ |
-|---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-
-> **Fill with real failures you caused and observed. | เติมจากที่พังจริงและสังเกตเอง**  
-> Break it deliberately: remove a router interface IP · assign a network address to a host · misconfigure a `/30` on a serial link  
-> ตั้งใจพัง: ถอด IP บน router interface · ตั้ง network address ให้ host · ตั้ง `/30` ผิดวงบน serial
-
----
-
 ### Key Formulas | สูตรที่ใช้
 
 ```
