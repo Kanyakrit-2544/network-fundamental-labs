@@ -29,12 +29,12 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 | Site / Link | Prefix | Network | Broadcast | Router IP | Host Range | Usable |
 |---|---|---|---|---|---|---|
-| Site 1 | /26 | 192.168.1.0 | | | | |
-| Site 2 | /26 | 192.168.1.128 | | | | |
-| Site 3 | /28 | | | | | |
-| R1 ↔ Internet | /30 | | | | | |
-| R2 ↔ Internet | /30 | | | | | |
-| R4 ↔ Internet | /30 | | | | | |
+| Site 1 | /26 | 192.168.1.0 |192.168.1.63 |192.168.1.62 | 64| 62|
+| Site 2 | /26 | 192.168.1.128 |192.168.1.191 |192.168.1.190 | 64| 62|
+| Site 3 | /28 | 192.168.1.64| 192.168.1.79| 192.168.1.78|16 | 62|
+| R1 ↔ Internet | /30 |192.168.1.112 | 192.168.1.115|192.168.1.114 | 4| 2|
+| R2 ↔ Internet | /26 |192.168.1.192 | 192.168.1.255|192.168.1.254 | 64|62 |
+| R4 ↔ Internet | /30 | 192.168.1.116| 192.168.1.119|192.168.1.118 | 4|2 |
 
 > เติมของจริงจาก lab ให้ครบทุกช่อง
 
@@ -70,7 +70,7 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 ### Topology | ผังเครือข่าย
 
-![topology](screenshots/topology.png)
+![topology](labs/Topology.png)
 
 ---
 
@@ -78,7 +78,7 @@ Course: Networking Fundamentals (David Bombal) · Week 1–2 of cloud engineerin
 
 **End-to-end connectivity from PC6**
 
-![ping](screenshots/ping-success.png)
+![ping](labs/ping.png)
 
 **EN** — PC6 successfully resolves and reaches `cisco.com`, `facebook.com`, and `8.8.8.8` with 0% loss. `TTL=126` confirms the packets crossed **2 routers** — the default TTL of 128 is decremented once per hop. This proves inter-site routing through the serial links is working, not just local connectivity.
 
